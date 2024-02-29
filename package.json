@@ -1,11 +1,11 @@
 {
-  "description": "Provides a bare-bones Foundry module template repo to get set up with using the TyphonJS Runtime Library and Svelte with ES Modules.",
-  "license": "MIT",
+  "description": "Elite: Dangerous Role Playing Game system for FoundryVTT",
+  "license": "MPL-2.0",
   "private": true,
   "type": "module",
-  "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
+  "author": "Bruno Marques <bruno@bmarques.net> (https://github.com/ElSaico)",
   "contributors": [
-    "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
+    "Bruno Marques <bruno@bmarques.net> (https://github.com/ElSaico)"
   ],
   "imports": {
     "#runtime/*": "@typhonjs-fvtt/runtime/*",
