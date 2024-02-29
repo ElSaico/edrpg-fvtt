@@ -5,9 +5,9 @@ import {
    postcssConfig,
    terserConfig }    from '@typhonjs-fvtt/runtime/rollup';
 
-const s_PACKAGE_ID = 'modules/edrpg';
+const s_PACKAGE_ID = 'systems/edrpg';
 
-const s_COMPRESS = false;  // Set to true to compress the module bundle.
+const s_COMPRESS = false;  // Set to true to compress the system bundle.
 const s_SOURCEMAPS = true; // Generate sourcemaps for the bundle (recommended).
 
 // Used in bundling particularly during development. If you npm-link packages to your project add them here.
@@ -21,7 +21,7 @@ export default () =>
    /** @type {import('vite').UserConfig} */
    return {
       root: 'src/',                 // Source location / esbuild root.
-      base: `/${s_PACKAGE_ID}/`,    // Base module path that 30001 / served dev directory.
+      base: `/${s_PACKAGE_ID}/`,    // Base system path that 30001 / served dev directory.
       publicDir: false,             // No public resources to copy.
       cacheDir: '../.vite-cache',   // Relative from root directory.
 
@@ -40,7 +40,7 @@ export default () =>
       // - Set to `open` to boolean `false` to not open a browser window automatically. This is useful if you set up a
       // debugger instance in your IDE and launch it with the URL: 'http://localhost:30001/game'.
       //
-      // - The top proxy entry redirects requests under the module path for `style.css` and following standard static
+      // - The top proxy entry redirects requests under the system path for `style.css` and following standard static
       // directories: `assets`, `lang`, and `packs` and will pull those resources from the main Foundry / 30000 server.
       // This is necessary to reference the dev resources as the root is `/src` and there is no public / static
       // resources served with this particular Vite configuration. Modify the proxy rule as necessary for your
