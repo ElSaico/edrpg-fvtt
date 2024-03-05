@@ -16,8 +16,7 @@ const s_RESOLVE_CONFIG = {
    dedupe: ['svelte']
 };
 
-export default () =>
-{
+export default () => {
    /** @type {import('vite').UserConfig} */
    return {
       root: 'src/',                 // Source location / esbuild root.

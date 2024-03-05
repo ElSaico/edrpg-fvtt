@@ -1,0 +1,22 @@
+{
+  "Actor": {
+    "types": [
+      "character",
+      "npcIndividual"
+    ],
+    "templates": {},
+    "character": {},
+    "npcIndividual": {}
+  },
+  "Item": {
+    "types": [
+      "background",
+      "enhancement",
+      "karma"
+    ],
+    "templates": {},
+    "background": {},
+    "enhancement": {},
+    "karma": {}
+  }
+}
