@@ -1,9 +1,10 @@
-import { svelte } from "@sveltejs/vite-plugin-svelte";
-import resolve from "@rollup/plugin-node-resolve";
-import preprocess from "svelte-preprocess";
 import { terserConfig } from "@typhonjs-fvtt/runtime/rollup";
-import autoprefixer from "autoprefixer";
+import { svelte } from "@sveltejs/vite-plugin-svelte";
+import preprocess from "svelte-preprocess";
+import resolve from "@rollup/plugin-node-resolve";
+
 import tailwindcss from "tailwindcss";
+import autoprefixer from "autoprefixer";
 import postcssPresetEnv from "postcss-preset-env";
 import cssnano from "cssnano";
 

@@ -5,9 +5,6 @@ export default {
    content: ["./src/**/*.{js,svelte}"],
 
    theme: {
-      fontFamily: {
-         sans: ['"Exo 2"', "sans-serif"],
-      },
       colors: {
          black: "#000000",
          white: "#ffffff",
