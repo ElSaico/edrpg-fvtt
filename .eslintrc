@@ -10,7 +10,8 @@
   // with one that you do prefer. The second config defines globals defined in `foundry.js` for use w/ `no-shadow`.
   "extends": [
     "@typhonjs-config/eslint-config/esm/2022/browser",
-    "@typhonjs-fvtt/eslint-config-foundry.js"
+    "@typhonjs-fvtt/eslint-config-foundry.js",
+    "prettier"
   ],
 
   "env": {
@@ -36,7 +37,6 @@
         "status",
         "top"
       ]
-    }],
-    "brace-style" : ["warn", "1tbs"]
+    }]
   }
 }
