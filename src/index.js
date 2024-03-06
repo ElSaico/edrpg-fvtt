@@ -1,8 +1,9 @@
 import registerSystemSettings from "./system/settings.js";
 import EDActorSheet from "./sheets/actor.js";
 import EDActor from "./actor.js";
+import "./index.css";
 
-Hooks.once('init', async () => {
+Hooks.once("init", async () => {
    registerSystemSettings();
 
    CONFIG.Actor.documentClass = EDActor;

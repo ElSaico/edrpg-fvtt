@@ -1,0 +1,20 @@
+@import url(font.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .edrpg-sheet .window-content {
+    font-family: "Exo 2", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-condensed {
+    font-stretch: condensed;
+  }
+  .font-expanded {
+    font-stretch: expanded;
+  }
+}

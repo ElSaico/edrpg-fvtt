@@ -1,5 +1,7 @@
+<svelte:options accessors={true} />
+
 <script>
-   import { ApplicationShell } from '#runtime/svelte/component/core';
+   import { ApplicationShell } from "#runtime/svelte/component/core";
 
    export let sheet;
    export let component = false;
@@ -9,14 +11,12 @@
       let attributeValue = event.srcElement.value;
       let attributeName = event.srcElement.name;
       let docData = { _id: sheet.actor._id };
-      if(event.srcElement.type === 'checkbox') attributeValue = event.srcElement.checked;
+      if (event.srcElement.type === "checkbox") attributeValue = event.srcElement.checked;
       docData[attributeName] = attributeValue;
       sheet.actor.update(docData);
    };
 </script>
 
-<svelte:options accessors={true}/>
-
 <ApplicationShell bind:elementRoot>
-   <svelte:component this={component} bind:sheet={sheet} update={update}/>
+   <svelte:component this={component} bind:sheet {update} />
 </ApplicationShell>
