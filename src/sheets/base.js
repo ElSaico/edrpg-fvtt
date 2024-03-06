@@ -16,11 +16,12 @@ export default class EDSheet extends SvelteApplication {
          title: "ED.title",
          width: 600,
          height: 400,
+         classes: ["edrpg-sheet"],
 
          svelte: {
             class: BaseSheetTemplate,
             target: document.body,
-            props: function() {
+            props: function () {
                return {
                   sheet: this,
                   component: this.#component,
