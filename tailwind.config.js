@@ -1,8 +1,15 @@
 import forms from "@tailwindcss/forms";
+import clipPath from "tailwind-clip-path";
 
 /** @type {import('tailwindcss').Config} */
 export default {
    content: ["./src/**/*.{js,svelte}"],
+   safelist: [
+      { pattern: /clip-path-header-block-.*/ },
+      { pattern: /(from|to)-.*-(begin|end|notes)/ },
+      "border-karma-table",
+      "text-right",
+   ],
 
    theme: {
       colors: {
@@ -10,11 +17,11 @@ export default {
          white: "#ffffff",
          transparent: "transparent",
          section: {
+            begin: "#000007",
             "embedded-header": "#025778",
-            "long-corner": "#0e2b45",
-            "short-corner": "#236b9d",
             end: "#3397d9",
          },
+         secondary: "#2b3d4f",
          notes: "#e3e3e3",
          border: "#858585",
          table: {
@@ -32,7 +39,6 @@ export default {
          },
          karma: {
             begin: "#2e0078",
-            corner: "#421197",
             end: "#8a51ff",
             notes: "#c2b8ff",
             table: "#9e9cd1",
@@ -45,7 +51,21 @@ export default {
          },
          cash: "#68d7ba",
       },
+      clipPath: {
+         "header-block-left": {
+            title: "polygon(0 0, 50% 0, 75% 100%, 0 100%)",
+            content: "polygon(0 0, 75% 0, 100% 100%, 25% 100%)",
+         },
+         "header-block-center": {
+            title: "polygon(25% 0, 75% 0, 100% 100%, 0 100%)",
+            content: "polygon(0 0, 100% 0, 75% 100%, 25% 100%)",
+         },
+         "header-block-right": {
+            title: "polygon(50% 0, 100% 0, 100% 100%, 25% 100%)",
+            content: "polygon(25% 0, 100% 0%, 75% 100%, 0% 100%)",
+         },
+      },
    },
 
-   plugins: [forms],
+   plugins: [forms, clipPath],
 };

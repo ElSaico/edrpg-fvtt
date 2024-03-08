@@ -6,6 +6,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import tailwindcss from "tailwindcss";
 import autoprefixer from "autoprefixer";
 import postcssPresetEnv from "postcss-preset-env";
+import postcssPrefix from "postcss-prefix-selector";
 import cssnano from "cssnano";
 
 const s_PACKAGE_ID = "systems/edrpg";
@@ -39,7 +40,7 @@ export default () => {
             inject: false,
             compress: s_COMPRESS,
             sourceMap: s_SOURCEMAPS,
-            plugins: [tailwindcss, autoprefixer, postcssPresetEnv, cssnano],
+            plugins: [tailwindcss, autoprefixer, postcssPrefix({ prefix: ".edrpg-sheet" }), postcssPresetEnv, cssnano],
          },
       },
 

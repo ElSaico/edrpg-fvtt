@@ -1,14 +1,26 @@
-import registerSystemSettings from "./system/settings.js";
-import EDActorSheet from "./sheets/actor.js";
+import { TJSGameSettings } from "#runtime/svelte/store/fvtt/settings";
+import * as EDRPG from "./system/game.js";
+import EDSettings from "./system/settings.js";
 import EDActor from "./actor.js";
-import "./index.css";
+import EDCharacter from "./data/character.js";
+import EDSheetCharacter from "./sheets/character.js";
+import "../styles/index.css";
+
+/**
+ * @typedef {object} Game
+ *
+ * @augments Game
+ *
+ * @property {EDRPG} edrpg
+ */
 
 Hooks.once("init", async () => {
-   registerSystemSettings();
+   const settings = new TJSGameSettings("edrpg");
+   settings.registerAll(EDSettings, false);
 
    CONFIG.Actor.documentClass = EDActor;
+   CONFIG.Actor.dataModels.character = EDCharacter;
    /*
-   CONFIG.Actor.dataModels.character = CharacterData;
    CONFIG.Actor.dataModels.npcIndividual = NPCIndividualData;
 
    CONFIG.Item.documentClass = EDItem;
@@ -18,7 +30,7 @@ Hooks.once("init", async () => {
    */
 
    Actors.unregisterSheet("core", ActorSheet);
-   Actors.registerSheet("edrpg", EDActorSheet, {
+   Actors.registerSheet("edrpg", EDSheetCharacter, {
       types: ["character"],
       makeDefault: true,
    });
@@ -42,4 +54,6 @@ Hooks.once("init", async () => {
       makeDefault: true,
    });
    */
+
+   game.edrpg = EDRPG;
 });
