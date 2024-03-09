@@ -7,7 +7,7 @@
 
 <label class="block bg-gradient-to-r from-table-name to-white">
    <div
-      class="bg-gradient-to-r from-section-begin to-section-end text-white text-sm text-bold uppercase font-expanded pl-2 p-1
+      class="bg-gradient-to-r from-section-begin to-section-end text-white text-xs font-bold uppercase font-expanded pl-2 p-1
              [clip-path:polygon(0_0,calc(100%_-_20px)_0,100%_100%,0_100%)]"
    >
       {localize("EDRPG.sheet.rank")}

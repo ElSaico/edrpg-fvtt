@@ -13,7 +13,7 @@
    />
    <div class="flex flex-row gap-0">
       <span
-         class="bg-black px-6 py-1 text-white text-sm text-bold uppercase font-expanded
+         class="bg-black px-6 py-1 text-white text-xs font-bold uppercase font-expanded
                [clip-path:polygon(0_0,101%_0,100%_4px,calc(100%_-_24px)_100%,24px_100%)]"
       >
          {localize("EDRPG.sheet.name")}

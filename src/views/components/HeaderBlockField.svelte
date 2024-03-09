@@ -14,8 +14,8 @@
 
 <label>
    <div
-      class="bg-gradient-to-r from-{titleColor.start} to-{titleColor.end} p-1 text-{direction} text-white text-sm
-             text-bold uppercase font-expanded clip-path-header-block-{direction}-title"
+      class="bg-gradient-to-r from-{titleColor.start} to-{titleColor.end} p-1 text-{direction} text-white text-xs
+             font-bold uppercase font-expanded clip-path-header-block-{direction}-title"
    >
       {localize(`EDRPG.sheet.${field}`)}
    </div>
