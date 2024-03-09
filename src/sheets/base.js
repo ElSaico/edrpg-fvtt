@@ -19,6 +19,7 @@ export default class EDSheet extends SvelteApplication {
          width: 600,
          height: 400,
          classes: ["edrpg-sheet"],
+         tabs: [{ navSelector: ".tabs", contentSelector: ".tab-content", initial: "main" }],
 
          svelte: {
             class: BaseSheetView,

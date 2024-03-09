@@ -30,6 +30,14 @@
       "rank": "Rank",
       "rankPoints": "Rank Points",
 
+      "tabs": {
+        "main": "Main",
+        "skills": "Skills",
+        "bgKarma": "Backgrounds & Karma",
+        "combat": "Combat",
+        "equipment": "Equipment"
+      },
+
       "skills": {
         "name": "Skills",
         "combat": {
@@ -197,20 +205,16 @@
         }
       },
 
-      "SkillLabel": "Skill",
-      "ScoreLabel": "Score",
-      "BonusLabel": "Bonus",
-      "CheckedLabel": "Checked",
+      "table": {
+        "skills": {
+          "skill": "Skill",
+          "base": "Base",
+          "learning": "Learn",
+          "bonus": "Bonus"
+        }
+      },
+
       "Actions": "Actions",
-
-      "GeniusLabel": "Genius",
-      "MainLabel": "Main",
-      "SkillsLabel": "Skills",
-      "BackgroundsAndKarmaLabel": "Backgrounds & Karma",
-      "CombatLabel": "Combat",
-      "EquipmentLabel": "Equipment",
-      "DetailsLabel": "Details",
-
       "Backgrounds": "Backgrounds",
       "Background": "Background",
       "Enhancements": "Enhancements",

@@ -8,6 +8,12 @@
   main {
     font-family: "Exo 2", sans-serif;
   }
+
+  .tabs .active {
+    background: #78a0d1;
+    color: #ffffff;
+    text-shadow: none;
+  }
 }
 
 @layer utilities {

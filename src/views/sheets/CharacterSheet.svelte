@@ -9,6 +9,8 @@
    import RankField from "../components/RankField.svelte";
    import HeaderBlockField from "../components/HeaderBlockField.svelte";
 
+   import CharacterSkillsTab from "../tabs/CharacterSkillsTab.svelte";
+
    /** @type {import('#runtime/svelte/store/fvtt/document').TJSDocument} */
    export let document;
 </script>
@@ -79,4 +81,20 @@
          contentColor={{ start: "endurance-notes", end: "white" }}
       />
    </header>
+   <section id="tab-sections">
+      <nav class="tabs bg-gradient-to-r from-white to-table-name border-y my-4 font-bold">
+         <a class="item px-2.5 py-1 w-full" data-tab="main">{localize("EDRPG.sheet.tabs.main")}</a>
+         <a class="item px-2.5 py-1 w-full" data-tab="skills">{localize("EDRPG.sheet.tabs.skills")}</a>
+         <a class="item px-2.5 py-1 w-full" data-tab="backgrounds-karma">{localize("EDRPG.sheet.tabs.bgKarma")}</a>
+         <a class="item px-2.5 py-1 w-full" data-tab="combat">{localize("EDRPG.sheet.tabs.combat")}</a>
+         <a class="item px-2.5 py-1 w-full" data-tab="equipment">{localize("EDRPG.sheet.tabs.equipment")}</a>
+      </nav>
+      <section class="tab-content">
+         <div class="tab" data-tab="main"></div>
+         <div class="tab" data-tab="skills"><CharacterSkillsTab {document} /></div>
+         <div class="tab" data-tab="backgrounds-karma"></div>
+         <div class="tab" data-tab="combat"></div>
+         <div class="tab" data-tab="equipment"></div>
+      </section>
+   </section>
 </main>
